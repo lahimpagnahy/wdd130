@@ -1,0 +1,196 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Define CSS Variables */
+:root {
+    --primary-color: ##7d9e7d;
+    --secondary-color: #555;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --header-footer-background: #7d9e7d; /* color was first #d6d4ff but change to #7d9e7d for a better design */ 
+}
+
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header, footer {
+    background-color: var(--header-footer-background);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin-bottom: 1em;
+    }
+    .hamburger {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav ul.show {
+        display: flex;
+    }
+}
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 1em; /* add at the end to fix some issues */
+    margin-top: 1em; /* add at the end to fix some issues */
+}
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero article {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: rgba(0, 0, 0, 0.588);
+    padding: 1em;
+    border-radius: 5px;
+    max-width: 80%;
+    color: rgb(255, 253, 253);
+    margin-bottom: 2em; /* add at the end to fix some issues */
+}
+.hero .content-image {
+    float: right;
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin-left: 1em;
+    margin-bottom: 1em; /* add at the end to fix some issues */
+}
+main {
+    padding: auto; /* value was first 2em but set to auto after */
+    margin-bottom: 1em;
+}
+section {
+    margin-bottom: 1em; /* value was 2em but change to 1em for some harmony in the design */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+section h2 {
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+    
+}
+section p {
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-footer-background);
+    padding: 1em;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+}
+.social-icons {
+    display: flex;
+    gap: 1em;
+}
+.social-icons a, .social-icons img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #ccc;
+    text-decoration: none;
+}
+
+
+
+.social-icons a:hover {
+    background-color: var(--secondary-color);
+}
+
+.image-container {
+    text-align: center;
+
+}
+
+.image-container img {
+    width: 19%;
+    margin-right: 0.5em;
+    display: inline-block;
+}
+
+.image-container img:last-child {
+    margin-right: 0;
+}
